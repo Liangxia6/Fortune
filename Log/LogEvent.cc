@@ -1,7 +1,18 @@
 #include "LogEvent.h"
 
-LogEvent::LogEvent(const std::string& loggerName, LogLevel::Level level, const std::string file, uint64_t line
-            , uint64_t elapse, uint64_t threadId, uint64_t fiberId, uint64_t time_, const std::string& threadName)
+LogEvent::LogEvent(const std::string& loggerName, LogLevel::Level level, 
+            const std::string fileName, uint64_t line, 
+            uint64_t elapse, uint64_t threadId, uint64_t fiberId, 
+            uint64_t time, const std::string& threadName)
+            : loggername_(loggerName)
+            , level_(level)
+            , filename_(fileName)
+            , line_(line)
+            , elapse_(elapse)
+            , threadId_(threadId)
+            , fiberId_(fiberId)
+            , time_(time)
+            , threadname_(threadName)
 {
 
 }

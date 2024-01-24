@@ -12,8 +12,10 @@ class LogEvent {
 public:
     typedef std::shared_ptr<LogEvent> ptr;
 
-    LogEvent(const std::string& loggerName, LogLevel::Level level, const std::string file, uint64_t line
-            , uint64_t elapse, uint64_t threadId, uint64_t fiberId, uint64_t time, const std::string& threadname);
+    LogEvent(const std::string& loggerName, LogLevel::Level level, 
+            const std::string fileName, uint64_t line, 
+            uint64_t elapse, uint64_t threadId, uint64_t fiberId, 
+            uint64_t time, const std::string& threadName);
     
     LogLevel::Level getLevel() const { return level_; }
     std::string getContent() const { return ss_.str(); }

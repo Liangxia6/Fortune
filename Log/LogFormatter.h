@@ -3,6 +3,9 @@
 #include <string>
 #include <memory>
 #include <vector>
+#include <iostream>
+#include <map>
+#include <functional>
 #include "LogLevel.h"
 #include "LogEvent.h"
 /**
